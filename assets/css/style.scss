@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "UniNeueRegular";
+  src: url(../fonts/UniNeueRegular/UniNeueRegular.eot);
+  src: url(../fonts/UniNeueRegular/UniNeueRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/UniNeueRegular/UniNeueRegular.woff) format("woff"), url(../fonts/UniNeueRegular/UniNeueRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UniNeueHeavy";
+  src: url(../fonts/UniNeueHeavy/UniNeueHeavy.eot);
+  src: url(../fonts/UniNeueHeavy/UniNeueHeavy.eot?#iefix) format("embedded-opentype"), url(../fonts/UniNeueHeavy/UniNeueHeavy.woff) format("woff"), url(../fonts/UniNeueHeavy/UniNeueHeavy.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UniNeueBook";
+  src: url(../fonts/UniNeueBook/UniNeueBook.eot);
+  src: url(../fonts/UniNeueBook/UniNeueBook.eot?#iefix) format("embedded-opentype"), url(../fonts/UniNeueBook/UniNeueBook.woff) format("woff"), url(../fonts/UniNeueBook/UniNeueBook.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+h1 {
+  font-family: "Uni Neue Heavy";
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p,div {
+  font-family: "Uni Neue Regular";
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+body {
+  background: url('../images/background.jpg');
+}
+
+.main {
+  margin-top: 120px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  &-item {
+    & label {
+      display: none;
+      opacity: 0;
+    }
+
+    &--active label {
+      position: absolute;
+      margin-top: -12px;
+      margin-left: 5px;
+      display: block;
+      background: #F7F7FD;
+      padding: 5px;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    &--active &__input::-webkit-input-placeholder {
+      color: transparent;
+      transition: 0.3s;
+    }
+
+    &__input {
+      background: #F7F7FD;
+      color: #808080;
+      border-bottom: 2px solid #685ED6;
+      border-radius: 6px;
+      padding: 12px;
+      min-width: 400px;
+
+      &:focus {
+        border: 2px solid #685ED6;
+      }
+
+      &--active label {
+        display: block;
+      }
+
+      &::-webkit-input-placeholder {
+        transition: 0.3s;
+      }
+    }
+
+    &__button {
+      cursor: pointer;
+      background: #685ED6;
+      padding: 12px 32px;
+      color: #fff;
+      border-radius: 6px;
+    }
+  }
+}
+
+.form-item--active label {
+  display: block;
+}
+
+@media screen and (max-width: 1300px) {
+  .row {
+    justify-content: center;
+  }
+  .image {
+    display: none;
+  }
+}

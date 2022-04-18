@@ -1,10 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="RU">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Расчет акустического объема динамика</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <form action="" class="form">
+                <h1>Расчет акустического объема динамика</h1>
+                <p>Приложение для расчета Vas & Vbox при проектировании акустических систем</p>
 
+                <div class="form-item">
+                    <label for="mms">Значение массы подвижной системы Mms</label>
+                    <input type="text" id="mms" class="form-item__input" placeholder="Значение массы подвижной системы Mms">
+                </div>
+
+                <div class="form-item">
+                    <label for="cms">Гибкость подвеса подвижной системы динамика Cms</label>
+                    <input type="text" id="cms" class="form-item__input" placeholder="Гибкость подвеса подвижной системы динамика Cms">
+                </div>
+
+                <div class="form-item">
+                    <label for="rms">Механическое сопротивление подвеса Rms</label>
+                    <input type="text" id="rms" class="form-item__input" placeholder="Механическое сопротивление подвеса Rms">
+                </div>
+
+                <div class="form-item">
+                    <label for="re">Сопротивление звуковой катушки, Re</label>
+                    <input type="text" id="re" class="form-item__input" placeholder="Сопротивление звуковой катушки, Re">
+                </div>
+
+                <div class="form-item">
+                    <label for="re">Коэффициент электромеханической связи, Bl</label>
+                    <input type="text" id="Bl" class="form-item__input" placeholder="Коэффициент электромеханической связи, Bl">
+                </div>
+
+                <div class="form-item">
+                    <button class="form-item__button">Рассчитать</button>
+                </div>
+            </form>
+            <div class="image">
+                <img src="./assets/images/peoples.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./assets/js/main.js"></script>
 </body>
 </html>
