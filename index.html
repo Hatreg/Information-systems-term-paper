@@ -17,33 +17,48 @@
                 <h1>Расчет акустического объема динамика</h1>
                 <p>Приложение для расчета Vas & Vbox при проектировании акустических систем</p>
 
-                <div class="form-item">
-                    <label for="mms">Значение массы подвижной системы Mms</label>
-                    <input type="text" id="mms" class="form-item__input" placeholder="Значение массы подвижной системы Mms">
+                <div class="form-item-status">
+                    <div class="form-item-status__spinner">
+                    </div>
+                    <div class="form-item-status__info"></div>
                 </div>
 
                 <div class="form-item">
-                    <label for="cms">Гибкость подвеса подвижной системы динамика Cms</label>
-                    <input type="text" id="cms" class="form-item__input" placeholder="Гибкость подвеса подвижной системы динамика Cms">
+                    <label for="mms">Значение массы подвижной системы Mms (кг)</label>
+                    <input type="text" id="mms" class="form-item__input" placeholder="Значение массы подвижной системы Mms (г)" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="rms">Механическое сопротивление подвеса Rms</label>
-                    <input type="text" id="rms" class="form-item__input" placeholder="Механическое сопротивление подвеса Rms">
+                    <label for="cms">Гибкость подвеса подвижной системы динамика Cms (м/н)</label>
+                    <input type="text" id="cms" class="form-item__input" placeholder="Гибкость подвеса подвижной системы динамика Cms (мм/н)" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="re">Сопротивление звуковой катушки, Re</label>
-                    <input type="text" id="re" class="form-item__input" placeholder="Сопротивление звуковой катушки, Re">
+                    <label for="rms">Механическое сопротивление подвеса Rms (Нс/м)</label>
+                    <input type="text" id="rms" class="form-item__input" placeholder="Механическое сопротивление подвеса Rms (Кг/c)" required>
                 </div>
 
                 <div class="form-item">
-                    <label for="re">Коэффициент электромеханической связи, Bl</label>
-                    <input type="text" id="Bl" class="form-item__input" placeholder="Коэффициент электромеханической связи, Bl">
+                    <label for="re">Сопротивление звуковой катушки, Re (Ом)</label>
+                    <input type="text" id="re" class="form-item__input" placeholder="Сопротивление звуковой катушки, Re (Ом)" required>
                 </div>
 
                 <div class="form-item">
-                    <button class="form-item__button">Рассчитать</button>
+                    <label for="bl">Коэффициент электромеханической связи, Bl (Тл-м)</label>
+                    <input type="text" id="bl" class="form-item__input" placeholder="Коэффициент электромеханической связи, Bl (Тл-м)" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="sd">Площадь диффузора Sd (м^2)</label>
+                    <input type="text" id="sd" class="form-item__input" placeholder="Площадь диффузора Sd (м^2)" required>
+                </div>
+
+                <div class="form-item">
+                    <button class="form-item__button" id="calculate">Рассчитать</button>
+                </div>
+
+                <div class="form-detailed-calc" id="detailCalc">
+
                 </div>
             </form>
             <div class="image">
